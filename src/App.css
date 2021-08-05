@@ -1,3 +1,10 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+/* 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 * {
   -webkit-box-sizing: border-box;
@@ -361,4 +368,4 @@ body {
   margin-top: -110px;
   margin-left: 30px;
 }
-/*# sourceMappingURL=App.css.map */
+# sourceMappingURL=App.css.map */

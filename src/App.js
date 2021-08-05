@@ -5,19 +5,14 @@ import MainApp from './MainApp'
 import Login1 from './Login1'
 import Employeedata from './Employeedata';
 import Guestdata from './Guestdata';
+import Layouts from './layouts/routes'
 
 function App() {
   
   return( 
-  <BrowserRouter>
-    <Switch>
-      <Route exact path = '/' component={MainApp} />
-      <Route exact path = '/login' component={Login1} />
-      <Route exact path = '/employeedata' component={Employeedata} />
-      <Route exact path = '/guestdata' component={Guestdata} />
-      
-    </Switch>
-  </BrowserRouter>
+    <>
+    <Layouts />
+    </>
   )
 }
 
