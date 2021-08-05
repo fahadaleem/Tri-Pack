@@ -21,11 +21,12 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     color: "#343F56",
+    fontWeight: "600",
   },
   tagline: {
     display: "block",
     fontSize: "0.8rem",
-    color: "#343F56",
+    color: "#F54748",
   },
   button: {
     backgroundColor: "#343F56",
@@ -33,18 +34,23 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "1.2rem",
     color: "#FFFAFA",
     borderRadius: "30px",
+    "&:hover": {
+      backgroundColor: "#F54748",
+      color: "#FFFAFA",
+    },
   },
   link: {
     color: "#343F56",
     padding: "10px 30px",
+    fontWeight: "500 !important",
     "&:hover": {
-      backgroundColor: "#343F56",
+      backgroundColor: "#F54748",
       color: "#FFFAFA",
     },
   },
 }));
 
-const Home = () => {
+const Navbar = () => {
   const classes = useStyles();
   return (
     <AppBar
@@ -60,7 +66,7 @@ const Home = () => {
             <label className={classes.tagline}>Make easy to meet!</label>
           </Typography>
           <Box mx={3} display="flex">
-            <Link style={{ textDecoration: "none" }}>
+            <Link to="/" style={{ textDecoration: "none" }}>
               <Typography variant="h6" color="initial" className={classes.link}>
                 Home
               </Typography>
@@ -73,18 +79,19 @@ const Home = () => {
             </Link>
           </Box>
         </Box>
-
-        <Button
-          variant="outlined"
-          color="default"
-          className={classes.button}
-          endIcon={<ArrowForwardIosIcon />}
-        >
-          Login
-        </Button>
+        <Link to="/login" style={{ textDecoration: "none" }}>
+          <Button
+            variant="outlined"
+            color="default"
+            className={classes.button}
+            endIcon={<ArrowForwardIosIcon />}
+          >
+            Login
+          </Button>
+        </Link>
       </Toolbar>
     </AppBar>
   );
 };
 
-export default Home;
+export default Navbar;
