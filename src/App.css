@@ -4,6 +4,11 @@
   box-sizing: border-box;
   font-family: 'Raleway', sans-serif !important;
 }
+body, html{
+  overflow-x: hidden;
+}
+
+
 /* 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 * {

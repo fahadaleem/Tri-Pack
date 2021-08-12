@@ -1,4 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
+// import "./style.css"
 import {
   Container,
   Paper,
@@ -20,10 +21,16 @@ import Navbar from "../home/components/Navbar";
 const useStyles = makeStyles({
   root: {
     // backgroundColor: "#E9EAED",
-    backgroundColor: "#F54748",
+    // backgroundColor: "#50CB93",
+    // background: 'linear-gradient(253deg, rgba(80,203,147,1) 79%, rgba(51,115,116,1) 100%)',
+    background:'linear-gradient(0deg, rgba(80, 203, 147, 0.8), rgba(52, 63, 86, 0.8)), url(bg2.jpg)',
     position: "absolute",
     height: "100%",
+    backgroundPosition:"center",
+    backgroundSize:"cover",
     width: "100%",
+    // paddingBottom:"40px"
+
   },
   mainHeading: {
     fontWeight: "bold",
@@ -48,7 +55,7 @@ const useStyles = makeStyles({
     margin: "0 auto",
     backgroundColor: "#343F56",
     "&:hover": {
-      backgroundColor: "#F54748",
+      backgroundColor: "#50CB93",
     },
   },
   linkBtn: {
@@ -59,6 +66,7 @@ const useStyles = makeStyles({
   checkbox: {
     color: "#343F56 !important",
   },
+ 
 });
 
 const Login = (props) => {
@@ -94,7 +102,7 @@ const Login = (props) => {
       ) : (
         <>
         <Navbar />
-        <Container maxWidth="xs" component={Paper} elevation={3}>
+        <Container maxWidth="xs" className={classes.container} component={Paper} elevation={3}>
           <form className={`${classes.form}`}>
             <Box my={2}>
               <Typography
@@ -171,7 +179,18 @@ const Login = (props) => {
               )}
             </Box>
           </form>
+          
         </Container>
+        <div class="animation-area">
+		<ul class="box-area">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
         </>
       )}
     </div>

@@ -1,5 +1,6 @@
 import {Grid, Typography, makeStyles, Button} from '@material-ui/core'
-import Image from "../../../images/pic.svg"
+import Image from "../../../images/header.svg"
+import Fade from 'react-reveal/Fade';
 
 const useStyles = makeStyles(theme=>({
     container:{
@@ -18,7 +19,7 @@ const useStyles = makeStyles(theme=>({
         fontWeight:"500"
     },
     aboutUsBtn:{
-        backgroundColor:"#F54748",
+        backgroundColor:"#50CB93",
         padding:"10px 25px",
         color:"#fff", 
         borderRadius:"30px",
@@ -36,6 +37,7 @@ const Header = () => {
     return ( 
         <Grid container alignItems="center" className={classes.container}>
              <Grid item lg={6}>
+                 <Fade left>
                  <Typography variant="h2" color="initial" className={classes.mainHeading}>
                      About Triviz
                  </Typography>
@@ -45,9 +47,12 @@ const Header = () => {
                 <Button variant="outlined" color="default" className={classes.aboutUsBtn}>
                   Know More About Us
                 </Button>
+                </Fade>
             </Grid>
             <Grid item lg={6}>
+                <Fade right>
                 <img src={Image} alt="pic" className={classes.image} />
+                </Fade>
             </Grid>
         </Grid>
     );

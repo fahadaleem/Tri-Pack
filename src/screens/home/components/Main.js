@@ -1,4 +1,7 @@
 import { Container, Typography, makeStyles, Grid } from "@material-ui/core";
+import Shake from 'react-reveal/Shake';
+import ScrollAnimation from 'react-animate-on-scroll';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -9,15 +12,18 @@ const useStyles = makeStyles((theme) => ({
     color:"#343F56"
   },
   cards:{
-      backgroundColor:"#F54748",
+      backgroundColor:"#50CB93",
+      // background: 'linear-gradient(253deg, rgba(255,255,255,1) 0%, rgba(80,203,147,1) 0%, rgba(51,115,116,1) 81%, rgba(15,4,76,1) 100%)',
       margin:"50px 0px",
       padding:"100px 10px",
-      borderLeft:"10px solid #F54748",
+      borderLeft:"10px solid #50CB93",
+      transition:".300s",
         cursor:"pointer",
       '&:hover':{
-         borderLeft:"10px solid #343F56",
-         borderLeftColor:"#343F56 !important",
-     boxShadow:"2px 2px 10px #343F56"
+         borderLeft:"10px solid #0F044C",
+         borderLeftColor:"#0F044C !important",
+     boxShadow:"2px 2px 10px #343F56",
+     
 
      },
      color:"#FFFFFF",

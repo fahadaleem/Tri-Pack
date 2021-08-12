@@ -26,16 +26,16 @@ const useStyles = makeStyles((theme) => ({
   tagline: {
     display: "block",
     fontSize: "0.8rem",
-    color: "#F54748",
+    color: "#50CB93",
   },
   button: {
-    backgroundColor: "#343F56",
+    backgroundColor: "#50CB93",
     padding: "5px 70px",
     fontSize: "1.2rem",
     color: "#FFFAFA",
     borderRadius: "30px",
     "&:hover": {
-      backgroundColor: "#F54748",
+      backgroundColor: "#343F56",
       color: "#FFFAFA",
     },
   },
@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
     padding: "10px 30px",
     fontWeight: "500 !important",
     "&:hover": {
-      backgroundColor: "#F54748",
+      backgroundColor: "#50CB93",
       color: "#FFFAFA",
     },
   },
@@ -57,7 +57,7 @@ const Navbar = () => {
       position="static"
       color="primary"
       className={classes.appBar}
-      elevation={0}
+      elevation={3}
     >
       <Toolbar className={classes.toolBar}>
         <Box display="flex" alignItems="center">
