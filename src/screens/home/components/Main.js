@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const Main = () => {
+const Main = (props) => {
     const classes = useStyles();
   return (
     <Container maxWidth="md">
@@ -44,10 +44,14 @@ const Main = () => {
       </Typography>
       <Typography variant="h6" align="center" color="initial">You can join by creating your account as an Employee or as a guest!</Typography>
       <Grid container justifyContent="space-between">
-        <Grid lg={5} className={classes.cards}>
+        <Grid lg={5} className={classes.cards} onClick={()=>{
+          props.handleSetFormName("guest");
+        }}>
             <Typography variant="h3" color="initial" align="center" className={classes.cardTitle}>I'm a Guest!</Typography>
         </Grid>
-        <Grid lg={5} className={classes.cards}>
+        <Grid lg={5} className={classes.cards} onClick={()=>{
+          props.handleSetFormName("employee")
+        }}>
             <Typography variant="h3" color="initial" align="center" className={classes.cardTitle}>I'm an Employee!</Typography>
         </Grid>
       </Grid>
