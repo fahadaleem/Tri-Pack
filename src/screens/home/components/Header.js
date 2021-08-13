@@ -4,7 +4,10 @@ import Fade from 'react-reveal/Fade';
 
 const useStyles = makeStyles(theme=>({
     container:{
-        padding:"40px 40px"
+        padding:"40px 40px",
+        [theme.breakpoints.down("sm")]:{
+            flexDirection:"column-reverse"
+        }
     },
     image:{
         width:"100%",

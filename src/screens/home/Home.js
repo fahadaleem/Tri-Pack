@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
-import Loader from "../../utils/Loader"
+import Loader from "../../utils/Loader";
 import Main from "./components/Main";
-import Guest from "./components/Guest"
+import Guest from "./components/Guest";
+import EmployeForm from "./components/EmployeeForm";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -16,16 +17,19 @@ const Home = () => {
   }, []);
   return (
     <>
-    {loading?(<Loader />): 
-    <div>
-      <Navbar />
-      <Header />
-      <Main handleSetFormName={setFormName}/>
-      {formName==="guest"&&<Guest />}
-    </div>
-    }
+      {loading ? (
+        <Loader />
+      ) : (
+        <div>
+          <Navbar />
+          <Header />
+          <Main handleSetFormName={setFormName} />
+          {formName === "guest" && <Guest />}
+          {formName === "employee" && <EmployeForm />}
+        </div>
+      )}
     </>
-   );
-}
- 
+  );
+};
+
 export default Home;

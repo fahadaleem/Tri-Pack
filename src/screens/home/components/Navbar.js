@@ -5,6 +5,7 @@ import {
   makeStyles,
   Button,
   Box,
+  Hidden
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
@@ -38,6 +39,9 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: "#343F56",
       color: "#FFFAFA",
     },
+    [theme.breakpoints.down("sm")]:{
+    padding: "5px 25px",
+    }
   },
   link: {
     color: "#343F56",
@@ -61,11 +65,13 @@ const Navbar = () => {
     >
       <Toolbar className={classes.toolBar}>
         <Box display="flex" alignItems="center">
+        <Hidden mdDown>
           <Typography variant="h4" className={classes.title}>
             TriViz
             <label className={classes.tagline}>Make easy to meet!</label>
           </Typography>
-          <Box mx={3} display="flex">
+          </Hidden>
+          <Box mx={3} display="flex" flexWrap="wrap">
             <Link to="/" style={{ textDecoration: "none" }}>
               <Typography variant="h6" color="initial" className={classes.link}>
                 Home

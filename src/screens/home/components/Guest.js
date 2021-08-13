@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Axios from "axios";
+import axios from "axios";
 import {
   makeStyles,
   Container,
@@ -45,7 +45,7 @@ const Guest = () => {
       data.dateFrom &&
       data.dateTo
     ) {
-      Axios.post("http://localhost:3001/api/mail", {
+      axios.post("http://localhost:3001/api/mail", {
         NAME: data.name,
         EMAIL: data.email,
         CNIC: data.CNIC,
@@ -54,7 +54,7 @@ const Guest = () => {
         FROM: data.dateFrom,
         TO: data.dateTo,
       });
-      Axios.post("http://localhost:3001/api/insert", {
+      axios.post("http://localhost:3001/api/insert", {
         NAME: data.name,
         EMAIL: data.email,
         CNIC: data.CNIC,
@@ -68,7 +68,7 @@ const Guest = () => {
           // console.log(val.email);
           const emailing = val.email;
           if (emailing !== "") {
-            Axios.post("http://localhost:3001/api/emailToHost", {
+            axios.post("http://localhost:3001/api/emailToHost", {
               NAME: data.name,
               EMAIL: data.email,
               CNIC: data.CNIC,
