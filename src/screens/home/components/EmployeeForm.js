@@ -16,7 +16,8 @@ import {
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: "30px 25px",
-  },
+    marginBottom:"40px"
+    },
   textBox: {
     margin: "10px 0;",
   },
@@ -61,6 +62,7 @@ const EmployeeForm = () => {
       elevation={5}
       component={Paper}
       maxWidth="sm"
+      id="employee"
       className={classes.root}
     >
       <form onSubmit={handleSubmit}>

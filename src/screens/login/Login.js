@@ -92,7 +92,7 @@ const Login = (props) => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 1000);
   }, []);
 
   return (
@@ -101,7 +101,7 @@ const Login = (props) => {
         <Loader />
       ) : (
         <>
-        <Navbar />
+        <Navbar loginBtnShow={false}/>
         <Container maxWidth="xs" className={classes.container} component={Paper} elevation={3}>
           <form className={`${classes.form}`}>
             <Box my={2}>

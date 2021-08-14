@@ -5,6 +5,7 @@ import Loader from "../../utils/Loader";
 import Main from "./components/Main";
 import Guest from "./components/Guest";
 import EmployeForm from "./components/EmployeeForm";
+import {Element} from "react-scroll"
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -13,7 +14,7 @@ const Home = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 1000);
   }, []);
   return (
     <>
@@ -21,7 +22,7 @@ const Home = () => {
         <Loader />
       ) : (
         <div>
-          <Navbar />
+          <Navbar loginBtnShow={true} />
           <Header />
           <Main handleSetFormName={setFormName} />
           {formName === "guest" && <Guest />}

@@ -54,8 +54,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Navbar = () => {
+const Navbar = (props) => {
   const classes = useStyles();
+  console.log(props)
   return (
     <AppBar
       position="static"
@@ -85,8 +86,9 @@ const Navbar = () => {
             </Link>
           </Box>
         </Box>
-        <Link to="/login" style={{ textDecoration: "none" }}>
+        <Link  to="/login" style={{ textDecoration: "none" }}>
           <Button
+          style={{display:!props.loginBtnShow&&"none"}}
             variant="outlined"
             color="default"
             className={classes.button}

@@ -16,6 +16,8 @@ import {
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: "30px 25px",
+    marginBottom:"40px"
+
   },
   textBox: {
     margin: "10px 0;",
@@ -106,6 +108,7 @@ const Guest = () => {
       component={Paper}
       maxWidth="sm"
       className={classes.root}
+      id="guest"
     >
       <form onSubmit={handleSubmit}>
         <Typography variant="h3" color="initial" align="center">
