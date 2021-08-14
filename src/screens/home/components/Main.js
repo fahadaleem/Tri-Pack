@@ -53,40 +53,38 @@ const Main = (props) => {
       <Typography variant="h6" align="center" color="initial">
         You can join by creating your account as an Employee or as a guest!
       </Typography>
-      <Grid container justifyContent="center" alignItems="center">
-        <Grid
-          lg={5}
-          md={5}
-          sm={10}
-          xs={10}
-          className={classes.cards}
-          onClick={() => {
-            props.handleSetFormName("guest");
-          }}
-        >
-          <a href="#guest" style={{textDecoration:"none",color:"#fff"}}>
-            <Typography
-              variant="h3"
-              color="initial"
-              align="center"
-              className={classes.cardTitle}
-            >
-              I'm a Guest!
-            </Typography>
-            </a>
+
+      <Grid container justifyContent="space-between" alignItems="center">
+        <Grid lg={5} md={5} sm={10} xs={10}>
+          <a
+            onClick={() => {
+              props.handleSetFormName("guest");
+            }}
+            href="#guest"
+            style={{ textDecoration: "none", color: "#fff" }}
+          >
+            <div className={classes.cards}>
+              <Typography
+                variant="h3"
+                color="initial"
+                align="center"
+                className={classes.cardTitle}
+              >
+                I'm a Guest!
+              </Typography>
+            </div>
+          </a>
         </Grid>
-        <Grid
-          lg={5}
-          md={5}
-          sm={10}
-          xs={10}
-          className={classes.cards}
-          onClick={() => {
-            props.handleSetFormName("employee");
-            window.scrollY = window.scrollY + 40;
-          }}
-        >
-          <a href="#employee" style={{textDecoration:"none",color:"#fff"}}>
+        <Grid lg={5} md={5} sm={10} xs={10}>
+          <a
+            onClick={() => {
+              props.handleSetFormName("employee");
+              window.scrollY = window.scrollY + 40;
+            }}
+            href="#employee"
+            style={{ textDecoration: "none", color: "#fff" }}
+          >
+            <div className={classes.cards}>
             <Typography
               variant="h3"
               color="initial"
@@ -95,7 +93,8 @@ const Main = (props) => {
             >
               I'm an Employee!
             </Typography>
-            </a>
+            </div>
+          </a>
         </Grid>
       </Grid>
     </Container>

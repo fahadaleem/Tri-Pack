@@ -87,7 +87,7 @@ const EmployeeForm = () => {
           <TextField
             id="host"
             value={data.hostName}
-            onChange={(e) => setData({ ...data, name: e.target.value })}
+            onChange={(e) => setData({ ...data, hostName: e.target.value })}
             label="Enter Host Name"
           />
         </FormControl>
