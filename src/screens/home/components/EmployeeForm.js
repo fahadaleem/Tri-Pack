@@ -21,6 +21,17 @@ const useStyles = makeStyles((theme) => ({
   textBox: {
     margin: "10px 0;",
   },
+  submitBtn:{
+    padding:"10px 45px !important",
+    borderRadius:"25px",
+    backgroundColor:"#50CB93",
+    border:"2px solid #50CB93",
+    color:"#fff",
+    '&:hover':{
+      backgroundColor:"white",
+      color:"#50CB93"
+    }
+  }
 }));
 
 const EmployeeForm = () => {
@@ -66,10 +77,10 @@ const EmployeeForm = () => {
       className={classes.root}
     >
       <form onSubmit={handleSubmit}>
-        <Typography variant="h3" color="initial" align="center">
+        <Typography variant="h4" color="initial" align="center">
           Employee
         </Typography>
-        <Typography variant="h4" color="initial" style={{ margin: "20px 0" }}>
+        <Typography variant="h6" color="initial" style={{ margin: "20px 0" }}>
           Enter Your Details
         </Typography>
         <FormControl fullWidth className={classes.textBox}>
@@ -88,7 +99,7 @@ const EmployeeForm = () => {
             label="Enter Your Email"
           />
         </FormControl>
-        <Button type="submit" variant="outlined" color="default">
+        <Button type="submit" variant="outlined" color="default" className={classes.submitBtn}>
           Submit
         </Button>
       </form>
