@@ -78,7 +78,7 @@ const Navbar = (props) => {
                 Home
               </Typography>
             </Link>
-            <Link style={{ textDecoration: "none" }}>
+            <Link to="/about" style={{ textDecoration: "none" }}>
               {" "}
               <Typography variant="h6" color="initial" className={classes.link}>
                 About Us

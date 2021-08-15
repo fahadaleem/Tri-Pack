@@ -9,7 +9,8 @@ import Login1 from "../Login1";
 import Home from "../screens/home/Home";
 import Login from "../screens/login/Login";
 import Employeedata from "../Employeedata";
-import Guestdata from "../Guestdata"
+import Guestdata from "../Guestdata";
+import AboutUs from "../screens/about/AboutUs";
 
 const Layouts = () => {
   return (
@@ -18,8 +19,9 @@ const Layouts = () => {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
-          <Route exact path = '/guestdata' component={Guestdata} />
-                    <Route exact path = '/employeedata' component={Employeedata} />
+          <Route exact path="/guestdata" component={Guestdata} />
+          <Route exact path="/employeedata" component={Employeedata} />
+          <Route exact path="/about" component={AboutUs} />
         </Switch>
       </BrowserRouter>
     </>
