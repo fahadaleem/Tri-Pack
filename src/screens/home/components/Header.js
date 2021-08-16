@@ -1,6 +1,7 @@
 import {Grid, Typography, makeStyles, Button} from '@material-ui/core'
 import Image from "../../../images/header.svg"
 import Fade from 'react-reveal/Fade';
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(theme=>({
     container:{
@@ -47,9 +48,11 @@ const Header = () => {
                 <Typography variant="h6" color="initial" className={classes.about}>
                 Tri-Pack Films Limited (Tri-Pack), a public limited company, is a joint venture between Mitsubishi Corporation of Japan and Packages Limited of Pakistan.
                 </Typography>
+<Link to="/about" style={{ textDecoration: "none" }}>
                 <Button variant="outlined" color="default" className={classes.aboutUsBtn}>
                   Know More About Us
                 </Button>
+</Link>
                 </Fade>
             </Grid>
             <Grid item lg={6}>
